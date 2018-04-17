@@ -5,35 +5,31 @@ import com.alibaba.dubbo.config.ApplicationConfig;
 import com.alibaba.dubbo.config.ReferenceConfig;
 import com.alibaba.dubbo.config.RegistryConfig;
 import com.alibaba.dubbo.config.ServiceConfig;
-import javafx.application.Application;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.lang.ref.Reference;
-
-public class GreetingServiceUseJavaTest {
+public class APIConfigurationTest {
 
     @Before
     public void initRemote(){
-        ApplicationConfig applicationConfig = new ApplicationConfig();
-        applicationConfig.setName("demo-provider");
-        applicationConfig.setVersion("1.0");
+        ApplicationConfig application = new ApplicationConfig();
+        application.setName("demo-provider");
+        application.setVersion("1.0");
 
         RegistryConfig registryConfig = new RegistryConfig();
         registryConfig.setAddress("multicast://224.1.1.1:9090");
 
-        ServiceConfig<GreetingService> serviceConfig = new ServiceConfig<GreetingService>();
+        ServiceConfig<GreetingService> serviceConfig = new ServiceConfig<>();
+        serviceConfig.setApplication(application);
+        serviceConfig.setRegistry(registryConfig);
         serviceConfig.setInterface(GreetingService.class);
         serviceConfig.setRef(new GreetingServiceImpl());
-        serviceConfig.setApplication(applicationConfig);
-        serviceConfig.setRegistry(registryConfig);
 
         serviceConfig.export();
-
     }
 
     @Test
-    public void sayHiTest(){
+    public void testSayHi(){
         ApplicationConfig applicationConfig = new ApplicationConfig();
         applicationConfig.setName("demo-consumer");
         applicationConfig.setVersion("1.0");
@@ -41,13 +37,13 @@ public class GreetingServiceUseJavaTest {
         RegistryConfig registryConfig = new RegistryConfig();
         registryConfig.setAddress("multicast://224.1.1.1:9090");
 
-        ReferenceConfig<GreetingService> referenceConfig = new ReferenceConfig<GreetingService>();
-        referenceConfig.setInterface(GreetingService.class);
+        ReferenceConfig<GreetingService> referenceConfig = new ReferenceConfig<>();
         referenceConfig.setApplication(applicationConfig);
         referenceConfig.setRegistry(registryConfig);
+        referenceConfig.setInterface(GreetingService.class);
 
         GreetingService greetingService = referenceConfig.get();
-        greetingService.sayHi("windylee");
+        System.out.println(greetingService.sayHi("windylee"));
     }
 
 }
