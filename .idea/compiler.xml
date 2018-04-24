@@ -8,12 +8,22 @@
         <outputRelativeToContentRoot value="true" />
         <module name="core-java-8" />
         <module name="dubbo" />
+        <module name="scala" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+<<<<<<< HEAD
       <module name="core-java-8" target="1.8" />
       <module name="dubbo" target="1.5" />
       <module name="java-advanced" target="1.5" />
+=======
+      <module name="dubbo" target="1.5" />
+      <module name="java-advanced" target="1.5" />
+      <module name="scala" target="1.5" />
+>>>>>>> 6fd94e90b2a88ef95e8c483a35bfff60461fbff3
     </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="PREFER_TARGET_JDK_COMPILER" value="false" />
   </component>
 </project>
