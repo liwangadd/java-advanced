@@ -6,12 +6,14 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="core-java-8" />
         <module name="dubbo" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="dubbo" target="1.8" />
-      <module name="java-advanced" target="1.8" />
+      <module name="core-java-8" target="1.8" />
+      <module name="dubbo" target="1.5" />
+      <module name="java-advanced" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>
