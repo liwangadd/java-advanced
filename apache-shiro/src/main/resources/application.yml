@@ -1,0 +1,11 @@
+server:
+  port: 9000
+  servlet-path: /
+  context-path: /
+shiro:
+  loginUrl: /login
+  successUrl: /secure
+  unauthorizedUrl: /login
+spring:
+  freemarker:
+    suffix: .ftl
