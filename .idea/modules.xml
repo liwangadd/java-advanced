@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/apache-shiro/apache-shiro.iml" filepath="$PROJECT_DIR$/apache-shiro/apache-shiro.iml" />
+      <module fileurl="file://$PROJECT_DIR$/apache-spark/apache-spark.iml" filepath="$PROJECT_DIR$/apache-spark/apache-spark.iml" />
       <module fileurl="file://$PROJECT_DIR$/apache-zookeeper/apache-zookeeper.iml" filepath="$PROJECT_DIR$/apache-zookeeper/apache-zookeeper.iml" />
       <module fileurl="file://$PROJECT_DIR$/core-java-8/core-java-8.iml" filepath="$PROJECT_DIR$/core-java-8/core-java-8.iml" />
       <module fileurl="file://$PROJECT_DIR$/dubbo/dubbo.iml" filepath="$PROJECT_DIR$/dubbo/dubbo.iml" />

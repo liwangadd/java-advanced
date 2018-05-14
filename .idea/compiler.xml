@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="apache-shiro" />
+        <module name="apache-spark" />
         <module name="apache-zookeeper" />
         <module name="core-java-8" />
         <module name="dubbo" />
@@ -15,7 +16,8 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="apache-shiro" target="1.8" />
-      <module name="apache-zookeeper" target="1.6" />
+      <module name="apache-spark" target="1.6" />
+      <module name="apache-zookeeper" target="1.8" />
       <module name="core-java-8" target="1.8" />
       <module name="dubbo" target="1.6" />
       <module name="java-advanced" target="1.6" />

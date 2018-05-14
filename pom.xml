@@ -21,6 +21,7 @@
         <module>scala</module>
         <module>apache-shiro</module>
         <module>apache-zookeeper</module>
+        <module>apache-spark</module>
     </modules>
 
     <dependencies>

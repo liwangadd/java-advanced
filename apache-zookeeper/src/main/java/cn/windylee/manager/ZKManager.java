@@ -10,4 +10,6 @@ public interface ZKManager {
 
      void update(String path, byte[] data) throws KeeperException, InterruptedException, KeeperException;
 
+     void delete(String path, int version) throws KeeperException, InterruptedException;
+
 }

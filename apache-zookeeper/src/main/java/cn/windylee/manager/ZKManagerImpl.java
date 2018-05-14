@@ -48,4 +48,9 @@ public class ZKManagerImpl implements ZKManager{
         int version = zkeeper.exists(path, true).getVersion();
         zkeeper.setData(path, data, version);
     }
+
+    @Override
+    public void delete(String path, int version) throws KeeperException, InterruptedException {
+        zkeeper.delete(path, version);
+    }
 }
